@@ -15,5 +15,5 @@ model Usuario {
   email String   @unique
   nome  String
   senha String
-  
+  ativo Boolean @default(true)
 }
