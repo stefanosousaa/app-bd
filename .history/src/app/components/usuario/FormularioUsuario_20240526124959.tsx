@@ -6,7 +6,6 @@ export interface FormularioUsuarioProps {
     onChange: (usuario: Partial<Usuario>) => void
     salvar: () => void
     cancelar: () => void
-    excluir: () => void
 }
 
 
@@ -55,7 +54,7 @@ export default function FormularioUsuario(props: FormularioUsuarioProps){
                 
 
                 <button className="bg-red-500 px-4 py-2 rounded-md" 
-                onClick={props.excluir}>
+                onClick={props.cancelar}>
                     Excluir
                 </button>
             </div>

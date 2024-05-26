@@ -3,10 +3,9 @@ import InputTexto from "../shared/InputTexto"
 
 export interface FormularioUsuarioProps {
     usuario: Partial<Usuario>
-    onChange: (usuario: Partial<Usuario>) => void
+    onChange: (usuario: Usuario) => void
     salvar: () => void
     cancelar: () => void
-    excluir: () => void
 }
 
 
@@ -40,24 +39,9 @@ export default function FormularioUsuario(props: FormularioUsuarioProps){
             }
             />
 
-            <div className="flex justify-between">
-                <div className="flex gap-5">
-                <button className="bg-blue-500 px-4 py-2 rounded-md" 
-                onClick={props.salvar}>
-                    Salvar
-                </button>
-
-                <button className="bg-zinc-500 px-4 py-2 rounded-md" 
-                onClick={props.cancelar}>
-                    Cancelar
-                </button>
-                </div>
-                
-
-                <button className="bg-red-500 px-4 py-2 rounded-md" 
-                onClick={props.excluir}>
-                    Excluir
-                </button>
+            <div className="flex gap-5">
+                <button className="bg-blue-500 px-4 py-2 rounded-md" onClick={props.salvar}>Salvar</button>
+                <button className="bg-zinc-500 px-4 py-2 rounded-md" onClick={props.cancelar}>Cancelar</button>
             </div>
 
             
